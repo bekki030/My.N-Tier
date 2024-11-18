@@ -23,6 +23,16 @@ public class DatabaseContext : IdentityDbContext<ApplicationUser>
     public DbSet<TodoItem> TodoItems { get; set; }
 
     public DbSet<TodoList> TodoLists { get; set; }
+    public DbSet<Person> Persons { get; set; }
+    public DbSet<Diary> Diarys { get; set; }
+    public DbSet<Employee> Employees { get; set; }
+    public DbSet<Event> Events { get; set; }
+    public DbSet<Exam> Exams { get; set; }
+    public DbSet<Group> Groups { get; set; }
+    public DbSet<Lesson> Lessons { get; set; }
+    public DbSet<Room> Rooms { get; set; }
+    public DbSet<Student> Students { get; set; }
+    public DbSet<Subject> Subjects { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
