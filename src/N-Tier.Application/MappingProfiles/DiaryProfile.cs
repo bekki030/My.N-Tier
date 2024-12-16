@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using N_Tier.Application.Models.Diary;
+using N_Tier.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,10 @@ namespace N_Tier.Application.MappingProfiles
     {
         public DiaryProfile()
         {
-            
+            CreateMap<CreateDiaryModel, Diary>().ReverseMap();
+            CreateMap<UpdateDiaryModel, Diary>().ReverseMap();
+            CreateMap<Diary,DiaryResponseModel>().ReverseMap();
+
         }
     }
 }

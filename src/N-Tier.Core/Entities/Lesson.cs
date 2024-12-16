@@ -9,10 +9,11 @@ namespace N_Tier.Core.Entities
 {
     public class Lesson : BaseEntity, IAuditedEntity
     {
-        public Guid SubjectId {  get; set; }
-        public Guid EmployeeId { get; set; }
-        public Guid GroupId { get; set; }
-        public DateTime DateTime { get; set; }
+        public virtual Subject Subject {  get; set; }
+        public virtual Employee Employee { get; set; }
+        public virtual Group Group { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
         public string? CreatedBy { get ; set ; }
         public DateTime? CreatedOn { get; set ; }
         public string? UpdatedBy { get; set; }

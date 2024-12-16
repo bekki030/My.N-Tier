@@ -9,8 +9,8 @@ namespace N_Tier.Application.Models.Student
 {
     public class UpdateStudentModel
     {
-        public Guid PersonId { get; set; }
-        public PersonResponseModel Person { get; set; }
+        public virtual CreatePersonModel Person { get; set; }
+        public Guid GroupId { get; set; }
     }
     public class UpdateStudentResponseModel : BaseResponseModel { }
 }

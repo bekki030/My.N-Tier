@@ -9,6 +9,6 @@ namespace N_Tier.Application.Models.Student
 {
     public class StudentResponseModel : BaseResponseModel
     {
-        public PersonResponseModel Person { get; set; }
+        public virtual PersonResponseModel Person { get; set; }
     }
 }

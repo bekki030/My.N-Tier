@@ -33,6 +33,16 @@ public class DatabaseContext : IdentityDbContext<ApplicationUser>
     public DbSet<Room> Rooms { get; set; }
     public DbSet<Student> Students { get; set; }
     public DbSet<Subject> Subjects { get; set; }
+    public DbSet<Attendance> Attendance {  get; set; }
+    public DbSet<CheatingReport> CheatingReports { get; set; }
+    public DbSet<DiaryRecords> DiaryRecords { get; set; }
+    public DbSet<ExamAnswersheet> ExamAnswersheet { get; set; }
+    public DbSet<ExamGradingCriteria> ExamGradingCriteria { get; set; }
+    public DbSet<ExamInvigilator> ExamInvigilator { get; set; }
+    public DbSet<ExamResult> ExamResult { get; set; }
+    public DbSet<ExamSession> ExamSession { get; set; }
+    public DbSet<Shift> Shift { get; set; }
+    public DbSet<StudentBehavior> StudentBehavior { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

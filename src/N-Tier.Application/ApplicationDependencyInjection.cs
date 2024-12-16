@@ -33,6 +33,26 @@ public static class ApplicationDependencyInjection
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IClaimService, ClaimService>();
         services.AddScoped<ITemplateService, TemplateService>();
+        ////////////////
+        services.AddScoped<IAttendanceService, AttendanceService>();
+        services.AddScoped<ICheatingReportService, CheatingReportService>();
+        services.AddScoped<IDiaryRecordsService, DiaryRecordsService>();
+        services.AddScoped<IDiaryServise, DiaryServise>();
+        services.AddScoped<IEmployeeServise, EmployeeServise>();
+        services.AddScoped<IEventServise, EventServise>();
+        services.AddScoped<IExamAnswersheetService, ExamAnswersheetService>();
+        services.AddScoped<IExamGradingCriteriaService, ExamGradingCriteriaService>();
+        services.AddScoped<IExamInvigilatorService, ExamInvigilatorService>();
+        services.AddScoped<IExamResultService, ExamResultService>();
+        services.AddScoped<IExamServise, ExamServise>();
+        services.AddScoped<IExamSessionService, ExamSessionService>();
+        services.AddScoped<IGroupServise, GroupServise>();
+        services.AddScoped<ILessonServise, LessonServise>();
+        services.AddScoped<IRoomServise, RoomServise>();
+        services.AddScoped<IShiftService, ShiftService>();
+        services.AddScoped<IStudentBehaviorService, StudentBehaviorService>();
+        services.AddScoped<IStudentServise, StudentServise>();
+        services.AddScoped<ISubjectServise, SubjectServise>();
 
         if (env.IsDevelopment())
             services.AddScoped<IEmailService, DevEmailService>();

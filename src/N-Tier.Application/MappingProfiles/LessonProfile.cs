@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AutoMapper;
+using N_Tier.Application.Models.Lesson;
+using N_Tier.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +9,13 @@ using System.Threading.Tasks;
 
 namespace N_Tier.Application.MappingProfiles
 {
-    internal class LessonProfile
+    public class LessonProfile : Profile
     {
+        public LessonProfile()
+        {
+            CreateMap<CreateLessonModel,Lesson>().ReverseMap();
+            CreateMap<UpdateLessonModel,Lesson>().ReverseMap();
+            CreateMap<Lesson,LessonResponseModel>().ReverseMap();
+        }
     }
 }

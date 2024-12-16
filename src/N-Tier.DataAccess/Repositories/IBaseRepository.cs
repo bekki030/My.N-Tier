@@ -6,9 +6,9 @@ namespace N_Tier.DataAccess.Repositories;
 
 public interface IBaseRepository<TEntity> where TEntity : BaseEntity
 {
-    Task<TEntity> GetFirstAsync(Expression<Func<TEntity, bool>> predicate);
+    Task<TEntity> GetFirstAsync( Expression<Func<TEntity, bool>> predicate);
 
-    Task<List<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate);
+    Task<List<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate, Func<IQueryable<TEntity>, IQueryable<TEntity>> include = null);
     IQueryable<TEntity> GetAll();
     IEnumerable<TEntity> GetAllAsEnumurable();
 

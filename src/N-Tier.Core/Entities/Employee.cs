@@ -10,8 +10,7 @@ namespace N_Tier.Core.Entities
 {
     public class Employee : BaseEntity, IAuditedEntity
     {
-        public Guid PersonId { get; set; }
-        public Person Person { get; set; }
+        public virtual Person Person { get; set; }
         public PositionEnum Position { get; set; }
         public List<Lesson> lessons { get; set; } = new List<Lesson>();
         public string? CreatedBy { get; set; }

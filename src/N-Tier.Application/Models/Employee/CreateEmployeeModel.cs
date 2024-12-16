@@ -10,7 +10,7 @@ namespace N_Tier.Application.Models.Employee
 {
     public class CreateEmployeeModel
     {
-        public PersonResponseModel Person { get; set; }
+        public CreatePersonModel Person { get; set; }
         public PositionEnum Position { get; set; }
     }
     public class CreateEmployeeResponseModel : BaseResponseModel { }
